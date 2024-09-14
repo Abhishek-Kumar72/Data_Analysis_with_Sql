@@ -1,0 +1,25 @@
+				solution of sql basic query level 1
+
+ 0.select first_name,last_name,gender from patients where gender='M';
+ 1.select first_name,last_name from patients where allergies is null ;
+ 2.select first_name from patients where first_name like 'C%'; 
+ 3.select first_name,last_name from patients where weight between 100 and 120;
+ 4.update patients set allergies ='NKA' where allergies is null; 
+ 5.select  concat(first_name,' ',last_name) as full_name from patients;
+ 6.select
+  first_name,
+  last_name,
+  province_name
+  from patients
+  inner join province_names on patients.province_id = province_names.province_id; 
+
+ 7. select count(patient_id) from patients where year(birth_date) = 2010; 
+ 8. select first_name,last_name,max(height) from patients; 
+ 9. select * from patients where patient_id in (1,45,534,879,1000); 
+ 10. select count(patient_id) from admissions; 
+ 11. select * from admissions where admission_date = discharge_date; 
+ 12. select patient_id,count(patient_id)as total_admission from admissions where patient_id = 579; 
+ 13. select distinct city from patients where province_id ='NS'; 
+ 14. select first_name,last_name,birth_date from patients where height >160 and weight > 70; 
+ 15. select first_name,last_name,allergies from patients where allergies is Not null and city      ='Hamilton'; 
+
